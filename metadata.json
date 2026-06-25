@@ -1,0 +1,6 @@
+{
+  "name": "Musician Portfolio",
+  "description": "An immersive, dark-aesthetic personal musician portfolio featuring a custom audio/video showcase, dynamic tour tracker, interactive visualizers, and a contact system with an inbox manager.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

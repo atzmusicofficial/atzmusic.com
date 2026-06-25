@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom Ambient Grid Pattern and Immersive Orbits */
+.immersive-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.ambient-glow-blue {
+  background: radial-gradient(circle, rgba(29, 78, 216, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.ambient-glow-purple {
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.ambient-glow-pink {
+  background: radial-gradient(circle, rgba(219, 39, 119, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.glass-panel {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(15, 15, 15, 0.8);
+  border-color: rgba(236, 72, 153, 0.2);
+  box-shadow: 0 15px 40px -15px rgba(236, 72, 153, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Vinyl Spin Keyframe */
+@keyframes vinyl-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.vinyl-active {
+  animation: vinyl-spin 12s linear infinite;
+}
+
+/* Custom vignette mask for backgrounds */
+.vignette-mask {
+  mask-image: radial-gradient(circle, black 30%, transparent 95%);
+  -webkit-mask-image: radial-gradient(circle, black 30%, transparent 95%);
+}
+
+/* Floating notes keyframe animation */
+@keyframes float-up-note {
+  0% {
+    transform: translateY(40px) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.45;
+  }
+  80% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(-120px) scale(1.1) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+.animate-float-note {
+  animation: float-up-note 6s ease-in-out infinite;
+}
+
+
